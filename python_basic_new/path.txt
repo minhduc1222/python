@@ -1,0 +1,1 @@
+https://roadmap.sh/python - Learn the Basic / Basic Syntax / Learn X in Y minutes (https://learnxinyminutes.com/docs/python/)
