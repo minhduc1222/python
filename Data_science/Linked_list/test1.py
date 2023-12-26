@@ -13,7 +13,9 @@ class Linked_List_Upgraded:
     def add_front(self,item):
         new_node = Node(item)
         new_node.next = self.head
-        self.head = new_node
+        self.head = new_node 
+        
+    #gggghg tij
     
     def add_after(self, node, item):
         new_node = Node(item)
