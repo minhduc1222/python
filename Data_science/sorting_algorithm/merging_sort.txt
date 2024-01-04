@@ -1,0 +1,15 @@
+merging sort works on divide and conquer principle 
+    + input broken into small - > enough to manage
+    + small parts solved( processed) in pair recursively
+    + finally combined to final
+
+time complexity
+merge(): O(n) linear run-time
+division_merge(): O(nlog2 n) - split recursively, call merge for each half
+            total halve number = log2 n
+            total items need to compared = c*n (c la hg so)
+            -> O(nlog2 n)
+
+=> merge sort: extremely fast, faster than bubble, insertion when dealing with large array
+with small array, insertion, bubble stomps
+    merge sort - use much more mems since it creates many new list to store half parts

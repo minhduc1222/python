@@ -1,0 +1,19 @@
+Quick_sort
+    divide and conquer principle
+
+    it divides the original array into 2 lists( smaller and larger)
+    (divide here's commonly known as partitioning)
+
+    select the pivot element(truc), compare the rest of items to it
+        + lower -> low list -> left
+        + same -> same list
+        + higher -> high list -> right
+
+Quick_sort time complexity
+    depend on pilot selection
+    worst case/scenario: the pivot = the first/last element of the array + with almost sorted array
+    
+    average: linear time: O(n log2 n) (O(n) + O(n log2 n)) (O(n) removed - grow much slower than the other)
+
+    best case: O(n) pivot = median value
+    O(n^2) = smallest, largest value

@@ -1,0 +1,6 @@
+Strength weakness on insertion sort
+
+it's uncomplicated to implement
+O(n^2) - more practically efficient than bubble sort
+work well for small array
+not practical for large array

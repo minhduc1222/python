@@ -1,0 +1,9 @@
+Bubble sort big O runtime complexity
+    - Using 2 nested for loops, and it traverses through n-1( or do n-1 comparisons) then n-2 and so on
+    => total = (n-1) + (n-2) + ... + 2 + 1 = n(n-1) / 2
+
+remove the constant cuz they don't change with the input size
+=> n(n-1) = n ^2 - n 
+
+=> O(n^2) average and worst case complexity
+    O(n) best case complexity ( already sorted - only need to be traversed one)
