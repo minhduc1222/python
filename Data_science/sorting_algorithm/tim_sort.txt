@@ -1,0 +1,13 @@
+tim_sort = hybrid sorting algorithm (combination of insertion sort and merge sort)
+
+a standard sorting in python
+
+iterate over a fixed part of a list, then merge_sort those part together -> one single final sorted list
+
+time complexity:
+O(n log2 n)
+_ even fast in small array(complete insertion sort)
+_ exceptionally well in almost sorted list -> O(n) (best case/scenario) 
+=> sort a list that seemingly has a preexisting order
+
+even its worst case/scenario O(n log2 n) still surpasses quicksort O(n^2)

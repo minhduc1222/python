@@ -17,8 +17,9 @@ def bubble_sort(array):
 
 # timing the bubble_sort function
 
-from timing.timing_sort_any_function import run_sorting_algorithm
 from random import randint
-array = [randint(1, 1000) for i in range(1000)]
+from timing.timing_sort_any_function import run_sorting_algorithm
+
 if __name__ == '__main__':
-    run_sorting_algorithm(algorithm=bubble_sort, array=array) # cant run??
+    array = [randint(0, 1000) for i in range(1000)]
+    run_sorting_algorithm(algorithm="bubble_sort", array=array)

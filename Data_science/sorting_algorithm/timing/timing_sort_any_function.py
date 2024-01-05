@@ -24,3 +24,4 @@ if __name__ == "__main__":
     array = [randint(0, 1000) for i in range(ARRAY_LENGTH)]
     # Call the timing function using the name(function) you want to time that takes above array as its parameter 
     run_sorting_algorithm(algorithm="sorted", array=array)
+    

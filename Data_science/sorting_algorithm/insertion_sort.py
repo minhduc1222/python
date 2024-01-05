@@ -17,7 +17,8 @@ def insertion_sort(array):
     return array
 
 # timing the insertion_sort
-from timing.timing_sort_any_function import run_sorting_algorithm
 from random import randint
-array = [randint(1,1000) for i in range(1000)]
-run_sorting_algorithm(insertion_sort,array)
+from timing.timing_sort_any_function import run_sorting_algorithm
+if __name__ == '__main__':
+    array = [randint(0, 1000) for i in range(0, 1000)]
+    run_sorting_algorithm(algorithm="insertion_sort",array=array)

@@ -9,18 +9,18 @@ def quicksort(array):
     
     for item in array:
         if item < pivot:
-            low.append(i)
+            low.append(item)
         elif item == pivot:
-            same.append(i)
+            same.append(item)
         elif item > pivot:
-            high.append(i)
+            high.append(item)
         
     return quicksort(low) + same + quicksort(high) # recursively sort the low and high list and combine with same list => final result
 
 # timing the insertion_sort
-from pdb import run
-from timing.timing_sort_any_function import run_sorting_algorithm
 from random import randint
+from timing.timing_sort_any_function import run_sorting_algorithm
 
-array = [randint(1,1000) for i in range(1000)]
-run_sorting_algorithm(quicksort,array)
+if __name__ == '__main__':
+    array = [randint(0, 1000) for i in range(1000)]
+    run_sorting_algorithm(algorithm="quicksort", array=array)
