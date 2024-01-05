@@ -34,12 +34,12 @@ def division_merge(array):
     return merge(left = division_merge(array[:midpoint]), right = division_merge(array[midpoint:]))
 
 
-# timing the insertion_sort
+# timing the merging_sort
 
 from random import randint
 from timing.timing_sort_any_function import run_sorting_algorithm
 
 if __name__ == '__main__':
-    array = [randint(0, 1000) for i in range(1000)]
+    array = [randint(0, 1000) for i in range(100)]
     run_sorting_algorithm(algorithm="division_merge", array=array)
     
