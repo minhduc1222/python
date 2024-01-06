@@ -42,5 +42,8 @@ print(x.get('apple'))
 print(x.get('banana'))
 
 x.display()
+x.remove('banana')
+print()
+x.display()
 
 

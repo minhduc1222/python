@@ -1,63 +1,73 @@
-class Main:
-    @staticmethod
-    def main(arg):
-        tree = BST() # Binary search tree
-        tree.insert(50)
-        tree.insert(30)
-        tree.insert(15)
-        tree.insert(50)
-        tree.insert(20)
-        tree.insert(10)
-        tree.insert(40)
-        tree.insert(60)
-        tree.in_order()
-
-
 class Node:
-    val = 0
-    def __init__(self, val):
+    def __init__(self, key):
         self.left = None
-        self.val = val
+        self.val = key
         self.right = None
-
-
-class BST:
+        
+class BST():
     root = None
-
-    def insert(self, key):
-        node = Node(key)
+    def insert(self, item):
+        node = Node(item)
         if self.root == None:
             self.root = node
             return
         
+        current = self.root
         prev = None
-        temp = self.root
-        while temp != None:
-            if key < temp.val:
-                prev = temp
-                temp = temp.left
-            elif key > temp.val:
-                prev = temp
-                temp = temp.right
-            elif key == temp.val:
-                return temp
-        if key < prev.val:
-            prev.left = node
-        elif key > prev.val:
-            prev.right = node
-    def in_order(self):
-        temp = self.root
-        stack = []
-
-        while ((temp != None) or not (len(stack) == 0)):
-            if temp != None:
-                stack.append(temp)
-                temp = temp.left
+        
+        while current != None:
+            if node.val == current.val:
+                return current.val
+            elif node.val > current.val:
+                prev = current
+                current = current.right
             else:
-                temp = stack.pop()
-                print(temp.val, end=' ')
-                temp = temp.right
+                prev = current
+                current = current.left
+                
+        if node.val < prev.val:
+            prev.left = node
+        else:
+            prev.right = node
 
+    def display(self):
+        current = self.root
+        if current == None:
+            print('the list is empty')
+            return
+        
+        stack = []
+        while current != None or len(stack) != 0:
+            if current != None:    
+                stack.append(current)
+                current = current.left
+            else:
+                current = stack.pop()
+                print(f'{current.val}', end = ' ')
+                current = current.right
+        print()
+        
+    def height(self):
+        current = self.root
+        prev = None
+        height = 0
+        while current != None:
+            prev = current
+            current = current.left
+            height +=1
+            if current == None:
+                current = prev.right
+
+        height = height - 1
+        return print(height)
 
 if __name__ == '__main__':
-    Main.main([])
+    x = BST()
+    x.insert(10)
+    x.insert(20)
+    x.insert(30)
+    x.insert(40)
+    x.display()
+    x.height()
+    
+# can print ra mot binary tree ma cac phan tu hien thi dung vi tri cua minh
