@@ -43,7 +43,7 @@ class Linked_list_upgraded:
         return popped.data
     
     def display(self):
-        if self.is_empty():
+        if self.is_Empty():
             print("LinkedList is empty.")
             return
         current = self.head

@@ -1,1 +1,1 @@
-print(' ' * 2 + 'a')
+print(float(20.2).is_integer())
