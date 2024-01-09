@@ -1,0 +1,2 @@
+start with a element, compare the remaining part of the list with that element, finding the smallest value and arrange it after the specified element
+repeating this process when traversing through the list

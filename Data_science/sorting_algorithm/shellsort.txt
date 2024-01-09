@@ -1,0 +1,6 @@
+shell_sort: sorting elements away from each other
+        start with sorting large sublist( 2 elements that are n units away from each) then go on reducing the size of it(n-=1)
+        traverse through the array, comparing element at position n, with a symmetrical(doi xung) element over the gap point
+        then reduncing the gap, and repeat the process till all elements are sorted
+
+        
