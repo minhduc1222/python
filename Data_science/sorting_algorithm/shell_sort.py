@@ -13,5 +13,10 @@ def shellSort(input_list):
         gap = gap//2
     return input_list
 
-list = [19,2,31,45,30,11,121,27]
-print(shellSort(list))
+# timing the tim_sort
+from random import randint
+from timing.timing_sort_any_function import run_sorting_algorithm
+
+if __name__ == '__main__':
+    array = [randint(0, 1000) for i in range(100)]
+    run_sorting_algorithm(algorithm="shellSort", array=array)
