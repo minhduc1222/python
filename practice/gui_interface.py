@@ -9,11 +9,18 @@ book_list = {'Harry porter': ['J.k. Rowling', 1200, 30],
              'The old man and the sea': ['Hermingway', 300, 10]}
 
 def box_selected(event):
+    
     name = listbox_book.curselection()[0]
     book_info = listbox_book.get(name)
     author = book_list[book_info][0]
     page = book_list[book_info][1]
     price = book_list[book_info][2]
+    insert(author, page, price)
+    
+def insert(author, page, price):
+    en_author.delete(0, END)
+    en_page.delete(0, END)
+    en_price.delete(0, END)
     
     en_author.insert(0, author)
     en_page.insert(0, page)
