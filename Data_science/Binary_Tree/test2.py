@@ -1,1 +1,1 @@
-print(float(20.2).is_integer())
+print(len(2))

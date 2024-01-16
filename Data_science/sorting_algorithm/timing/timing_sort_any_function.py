@@ -1,7 +1,7 @@
 from random import randint
 from timeit import repeat
 
-def run_sorting_algorithm(algorithm, array):
+def run_sorting_algorithm(algorithm, array=None):
     # Set up the context and prepare the call to the specified
     
     # only import the algorithm if the function is not 'sorted'(a built-in function)
@@ -9,7 +9,10 @@ def run_sorting_algorithm(algorithm, array):
     setup_code = f"from __main__ import {algorithm}" \
         if algorithm != "sorted" else ""
 
-    stmt = f"{algorithm}({array})"
+    if array != None:
+        stmt = f"{algorithm}({array})"
+    elif array == None:
+        stmt = f"{algorithm}"
 
     # Execute the code ten different times in seconds that each execution took
     times = repeat(setup=setup_code, stmt=stmt, repeat=10, number=100)
